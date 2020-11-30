@@ -14,12 +14,16 @@ function App() {
     const fetchProducts = async () => {
       const url = `http://localhost:8080/v1/product/search?param=${inputText}`;
       //setPosts(resp.data);
-      console.log(url);
       await fetch(url)
-        .then(response => response.json())
+        .then(response => {
+          if (response.ok) {
+            return response.json();
+          }
+          throw Error(response.status);
+        })
         .then(result => setProducts(result))
         .catch(error => {
-          console.error(JSON.stringify(error));
+          console.log('Error en consulta');
         });
     };
     fetchProducts();

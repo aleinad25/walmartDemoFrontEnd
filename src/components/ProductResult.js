@@ -7,6 +7,7 @@ const ProductResult = props => {
         <img src={`https://${image}`} alt={id} className="card-img-top"></img>
         <div className="card-body">
           <p className="card-text"> Marca : {brand}</p>
+          <p className="card-text"> id : {id}</p>
           <p className="card-text"> Descripción: {description}</p>
           <p className="card-text"> Descuento: {discount}</p>
           <p className="card-text"> precio: {price}</p>

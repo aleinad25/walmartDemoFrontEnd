@@ -23,6 +23,7 @@ class Buscador extends Component {
             <input
               type="submit"
               className="form-control form-control-lg"
+              pattern="[a-zA-Z][a-zA-Z0-9-_.]{3,}"
               value="Buscar"
             />
           </div>

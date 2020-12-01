@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ProductResult from './ProductResult';
 
 class ResultSearch extends Component {
-  showImage = () => {
+  showProduct = () => {
     const products = this.props.products;
     if (products.length === 0) return '';
     console.log(products);
@@ -17,7 +17,7 @@ class ResultSearch extends Component {
     );
   };
   render() {
-    return <React.Fragment>{this.showImage()}</React.Fragment>;
+    return <React.Fragment>{this.showProduct()}</React.Fragment>;
   }
 }
 export default ResultSearch;

@@ -4,7 +4,7 @@ import ProductResult from './ProductResult';
 class ResultSearch extends Component {
   showImage = () => {
     const products = this.props.products;
-    if (products.length === 0) return 'problema';
+    if (products.length === 0) return '';
     console.log(products);
     return (
       <React.Fragment>

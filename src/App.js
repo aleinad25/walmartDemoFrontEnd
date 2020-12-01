@@ -8,7 +8,9 @@ function App() {
 
   const searchData = text => {
     console.log(text);
-    setInputText(text);
+    if (text !== undefined) {
+      setInputText(text);
+    }
   };
   useEffect(() => {
     const fetchProducts = () => {

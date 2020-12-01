@@ -12,7 +12,7 @@ function App() {
   };
   useEffect(() => {
     const fetchProducts = async () => {
-      const url = `http://localhost:8080/v1/product/search?param=${inputText}`;
+      const url = `https://walmart-demo-back.herokuapp.com/v1/product/search?param=${inputText}`;
       //setPosts(resp.data);
       await fetch(url)
         .then(response => {

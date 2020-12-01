@@ -4,18 +4,14 @@ import ResultSearch from './components/ResultSearch';
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [inputText, setInputText] = useState();
+  const [inputText, setInputText] = useState('');
 
   const searchData = text => {
-    console.log(text);
-    if (text !== undefined) {
-      setInputText(text);
-    }
+    setInputText(text);
   };
   useEffect(() => {
     const fetchProducts = () => {
       const url = `https://walmart-demo-back.herokuapp.com/v1/product/search?param=${inputText}`;
-      //setPosts(resp.data);
       fetch(url)
         .then(response => {
           if (response.ok) {

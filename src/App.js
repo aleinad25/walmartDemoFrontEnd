@@ -14,7 +14,7 @@ function App() {
     const fetchProducts = () => {
       const url = `https://walmart-demo-back.herokuapp.com/v1/product/search?param=${inputText}`;
       //setPosts(resp.data);
-      await fetch(url)
+      fetch(url)
         .then(response => {
           if (response.ok) {
             return response.json();
